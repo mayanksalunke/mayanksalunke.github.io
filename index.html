@@ -104,7 +104,7 @@
                 <h2 class="text-3xl font-bold text-center mb-10 font-mono text-glow">About Me</h2>
                 <div class="max-w-3xl mx-auto text-center bg-gray-800 p-8 rounded-lg shadow-lg border border-cyan-500/20">
                     <p class="text-lg leading-relaxed text-gray-300">
-                        I am a cyber investigator and VAPT tester with experience in finding security weaknesses and performing penetration tests to improve system safety. I work closely with police stations to investigate cybercrimes, leveraging my technical skills to provide crucial support in complex cases.
+                        I am a Cyber Investigator and Penetration Tester with experience in finding security weaknesses and performing penetration tests to improve system safety. I work closely with police stations to investigate cybercrimes, leveraging my technical skills to provide crucial support in complex cases.
                     </p>
                 </div>
             </div>
@@ -281,9 +281,15 @@
 
         // Typing effect
         const typingTextElement = document.getElementById('typing-text');
-        const textToType = "Cyber Investigator & VAPT Tester";
+        // UPDATED TEXT HERE
+        const textToType = "Cyber Investigator & Penetration Tester";
         let i = 0;
         function typeWriter() {
+            // Reset animation if it has already run
+            if (i >= textToType.length) {
+                i = 0;
+                typingTextElement.innerHTML = '';
+            }
             if (i < textToType.length) {
                 typingTextElement.innerHTML += textToType.charAt(i);
                 i++;
